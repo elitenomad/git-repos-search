@@ -1,9 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Node and Yarn Versions
+## Built with
 
-Node 12.18.1
-Yarn 1.22.4
+1. Node 12.18.1
+2. Yarn 1.22.4
+3. ReactJS
+4. GitHub REST API v3
+5. VS Code, ESLint and Prettier
 
 ## Available Scripts
 
@@ -47,14 +50,24 @@ Note: Instead of using configuration .prettierrc file, added config to package.j
 
 ### Code Heirarchy
 
+```
 src
-| -> components
+    | -> components
+        | -> Home.js
+        | -> SearchBar.js
+        | -> Repositories.js
+        | -> Repository.js
+        | -> RepositoryHeader.js
 | -> services
-| -> styles
+    | -> api.js
+    | -> repositories.js
+| -> helpers
+    | -> btnHelper.js
 | -> App.js
-| -> routes.js
 
-Note: Initial folder hierarchy
+```
+
+Note: Application code hierarchy
 
 ### Analyzing the Bundle Size
 
@@ -68,9 +81,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
-### License
+### Technical decisions
 
-This project is under the MIT license. See the LICENSE for more information.
+- Initial idea was to create UI responsive components using styled-components library and flexbox design. Investigation showed react-bootstrap provides the components i need out of the box. Trade off i took is a bigger bundle to time it takes to create css layout and components.
+- Preferred axios due to ease of use and readability. It has comptability with most of the browser versions out there. One of the interesting features it provides is [cancelling requests using tokens](https://github.com/axios/axios#cancellation). I thought of using this feature if i fire the request to api onChange of the input. In the end i didn't as i triiger only one API request during the form submission.
+- Initially thought of adding a routing functionality. Decided against the router as i requirement is around listing the repositories.
 
 ---
 
