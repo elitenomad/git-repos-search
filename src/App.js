@@ -6,12 +6,12 @@ import Home from "./components/Home"
 const App = () => {
   return (
     <div className="App">
-      <div className="App-header">
-        <h2>GitHub Repositories</h2>
-      </div>
-      <div className="container">
+      <header className="App-header" role="banner">
+        <h1>GitHub Repositories</h1>
+      </header>
+      <main className="container" role="main">
         <Home />
-      </div>
+      </main>
     </div>
   )
 }

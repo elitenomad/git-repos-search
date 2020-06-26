@@ -21,7 +21,8 @@ const SearchBar = (props) => {
       <Row>
         <Col xs={12}>
           <Form onSubmit={handleSubmit} className="container-fluid">
-            <Form.Group>
+            <Form.Group controlId="formGroupEmail">
+              <Form.Label srOnly>Repository Name</Form.Label>
               <Form.Control
                 required
                 size="lg"
@@ -29,6 +30,7 @@ const SearchBar = (props) => {
                 placeholder="Enter Repository name here"
                 value={searchText}
                 onChange={handleChange}
+                autoFocus
               />
             </Form.Group>
 

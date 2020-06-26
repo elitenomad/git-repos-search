@@ -29,7 +29,7 @@ const Home = () => {
 
       <hr />
 
-      <Repositories repos={repos} onSortChange={() => {}} />
+      <Repositories repos={repos} />
     </>
   )
 }

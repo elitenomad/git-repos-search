@@ -23,6 +23,10 @@ describe("Repositories", () => {
       expect(wrapper().find(RepositoriesHeader).exists()).toBeTruthy()
     })
 
+    test("renders only header text with count 0", () => {
+      expect(wrapper().find(RepositoriesHeader).text()).toEqual('Found 0 repositories.')
+    })
+
     test("won't render Repository", () => {
       expect(wrapper().find(Repository).exists()).toBeFalsy()
     })
