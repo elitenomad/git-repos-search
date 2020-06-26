@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RepositoriesHeader for given props matches snapshot 1`] = `
+<div
+  className="container-fluid"
+>
+  <div
+    className="text-left row"
+  >
+    <div
+      className="col-md-12"
+    >
+      <p>
+        Found 
+        25
+         repositories.
+      </p>
+    </div>
+  </div>
+</div>
+`;

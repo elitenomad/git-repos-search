@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Repository for given props matches snapshot 1`] = `
+<div
+  className="card"
+>
+  <h2
+    className="card-header"
+  >
+    test
+  </h2>
+  <div
+    className="card-body"
+  >
+    <div
+      className="card-title h5"
+    >
+      test
+    </div>
+    <p
+      className="card-text"
+    >
+      testing desc
+    </p>
+    <div
+      className="text-right"
+    >
+      <span
+        className="badge badge-info"
+      >
+        Watchers count: 
+        25
+      </span>
+       
+    </div>
+  </div>
+</div>
+`;
