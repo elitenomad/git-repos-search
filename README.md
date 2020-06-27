@@ -116,17 +116,26 @@ src
 
 Note: Application code hierarchy
 
-### Analyzing the Bundle Size
+### How to use
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+    Clone this repository
+    $ git clone https://github.com/elitenomad/git-repos-search
+
+    Go into the repository
+    $ cd git-repos-search
+
+    Install dependencies
+    $ yarn install
+
+    Run the app
+    $ yarn start
+
+    Run the test
+    $ yarn test
 
 ### Deployment
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 ### Technical decisions
 
