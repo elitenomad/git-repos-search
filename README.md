@@ -140,6 +140,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
   - [Label for a form element](https://dequeuniversity.com/rules/axe/3.5/label?application=axeAPI)
   - [Page must contain Level-one heading](https://dequeuniversity.com/rules/axe/3.5/page-has-heading-one?application=axeAPI)
   - [Content should be inside landmark on page](https://dequeuniversity.com/rules/axe/3.5/landmark-one-main?application=axeAPI)
+- One more thing :) Currenly there is no caching to the requests it would be better to cache the requests based on the user input text to LocalStorage. e.g say user typed 'GoLang' and we cache the response to Localstorage with key as GoLang. So next time if user searches for same text we try to retreive the results from cache instead of server.
+- One more thing :) Currently Response has lots of data. out of which we use only 4 fields. It would be nice to implement something similar to what 'jq' does to filter out what we want from the response and keep passing around those fields in the app. Github GraphQL API solves this problem :) (I used github API V3 for this exercise)
 
 ---
 
