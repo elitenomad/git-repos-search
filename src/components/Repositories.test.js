@@ -6,7 +6,7 @@ import RepositoriesHeader from "./RepositoriesHeader"
 
 describe("Repositories", () => {
   let repos
-  let totalCount
+  let totalCount = 0
   const handleSubmit=jest.fn()
 
   const wrapper = () => mount(<Repositories repos={repos} totalCount={totalCount} handleSubmit={handleSubmit} />)

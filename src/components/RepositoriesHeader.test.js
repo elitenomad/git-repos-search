@@ -6,6 +6,7 @@ describe("RepositoriesHeader", () => {
   test("for given props matches snapshot", () => {
     const props = {
       repoCount: 125,
+      handleSubmit: jest.fn()
     }
     const tree = renderer.create(<RepositoriesHeader {...props} />).toJSON()
 

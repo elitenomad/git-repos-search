@@ -2,6 +2,7 @@ import React from "react"
 import Repository from "./Repository"
 import RepositoriesHeader from "./RepositoriesHeader"
 import {Container, Row, Col} from "react-bootstrap"
+import PropTypes from 'prop-types'
 
 const Repositories = (props) => {
   if (!props.repos) return null
@@ -28,6 +29,12 @@ const Repositories = (props) => {
       ) : null}
     </>
   )
+}
+
+Repositories.propTypes = {
+  repos: PropTypes.arrayOf(PropTypes.object),
+  totalCount: PropTypes.number.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
 }
 
 export default Repositories

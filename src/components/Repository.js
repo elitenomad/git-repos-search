@@ -1,6 +1,7 @@
 import React from "react"
 import Badge from "react-bootstrap/Badge"
 import Card from "react-bootstrap/Card"
+import PropTypes from 'prop-types'
 
 const Repository = (props) => {
   const {
@@ -19,6 +20,13 @@ const Repository = (props) => {
       </Card.Body>
     </Card>
   )
+}
+
+Repository.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  description: PropTypes.string,
+  watchers_count: PropTypes.number
 }
 
 export default Repository

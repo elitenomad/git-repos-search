@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 import Pagination from 'react-bootstrap/Pagination'
+import PropTypes from 'prop-types'
 
 /*
     Idea :  
@@ -52,6 +53,11 @@ const SimplePagination = (props) => {
             )}
         </>
     )
+}
+
+SimplePagination.propTypes = {
+  pages: PropTypes.number.isRequired,
+  onClick: PropTypes.func.isRequired
 }
 
 

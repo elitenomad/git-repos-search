@@ -1,6 +1,7 @@
 import React from "react"
 import {Container, Row, Col} from "react-bootstrap"
 import SimplePagination from './Pagination/SimplePagination'
+import PropTypes from 'prop-types'
 
 const RepositoriesHeader = (props) => {
   const {repoCount, handleSubmit} = props
@@ -22,5 +23,11 @@ const RepositoriesHeader = (props) => {
     </Container>
   )
 }
+
+RepositoriesHeader.propTypes = {
+  repoCount: PropTypes.number.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
+}
+
 
 export default RepositoriesHeader

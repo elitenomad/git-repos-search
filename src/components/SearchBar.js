@@ -2,6 +2,7 @@ import React from "react"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
 import {buttonText} from "../helpers/btnHelper"
+import PropTypes from 'prop-types'
 
 const SearchBar = (props) => {
   const {busy, searchText, onSearchTextInput, onSubmit} = props
@@ -40,6 +41,13 @@ const SearchBar = (props) => {
       </Button>
     </Form>
   )
+}
+
+SearchBar.propTypes = {
+  busy: PropTypes.bool,
+  searchText: PropTypes.string,
+  onSearchTextInput: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
 }
 
 export default SearchBar
