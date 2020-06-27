@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Pagination from 'react-bootstrap/Pagination'
 import PropTypes from 'prop-types'
 
@@ -30,8 +30,10 @@ const SimplePagination = (props) => {
 
     const [activePage, setActivePage] = useState(1)
 
-    React.useEffect(() => {
+      useEffect(() => {
         onClick(activePage)
+        // Reference: https://reactjs.org/docs/hooks-faq.html#is-it-safe-to-omit-functions-from-the-list-of-dependencies
+        // eslint-disable-next-line 
       }, [activePage]);
       
       const handlePrev = () => { 
