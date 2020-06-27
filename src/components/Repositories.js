@@ -6,11 +6,14 @@ import {Container, Row, Col} from "react-bootstrap"
 const Repositories = (props) => {
   if (!props.repos) return null
 
-  const {repos} = props
+  const {repos, totalCount, handleSubmit} = props
 
   return (
-    <div>
-      <RepositoriesHeader repoCount={repos.length} />
+    <>
+      <RepositoriesHeader
+        repoCount={totalCount}
+        handleSubmit={handleSubmit}
+      />
 
       {repos.length > 0 ? (
         <Container>
@@ -23,7 +26,7 @@ const Repositories = (props) => {
           </Row>
         </Container>
       ) : null}
-    </div>
+    </>
   )
 }
 

@@ -5,16 +5,66 @@ exports[`RepositoriesHeader for given props matches snapshot 1`] = `
   className="container-fluid"
 >
   <div
-    className="text-left row"
+    className="row"
   >
     <div
-      className="col-md-12"
+      className="text-left col-6"
     >
       <p>
         Found 
-        25
+        125
          repositories.
       </p>
+    </div>
+    <div
+      className="text-right col-6"
+    >
+      <ul
+        className="pagination-end pagination"
+      >
+        <li
+          className="page-item disabled"
+        >
+          <span
+            className="page-link"
+            disabled={true}
+            onClick={[Function]}
+          >
+            <span
+              aria-hidden="true"
+            >
+              ‹
+            </span>
+            <span
+              className="sr-only"
+            >
+              Previous
+            </span>
+          </span>
+        </li>
+        <li
+          className="page-item"
+        >
+          <a
+            className="page-link"
+            href="#"
+            onClick={[Function]}
+            onKeyDown={[Function]}
+            role="button"
+          >
+            <span
+              aria-hidden="true"
+            >
+              ›
+            </span>
+            <span
+              className="sr-only"
+            >
+              Next
+            </span>
+          </a>
+        </li>
+      </ul>
     </div>
   </div>
 </div>

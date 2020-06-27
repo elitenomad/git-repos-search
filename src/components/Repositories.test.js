@@ -6,7 +6,10 @@ import RepositoriesHeader from "./RepositoriesHeader"
 
 describe("Repositories", () => {
   let repos
-  const wrapper = () => mount(<Repositories repos={repos} />)
+  let totalCount
+  const handleSubmit=jest.fn()
+
+  const wrapper = () => mount(<Repositories repos={repos} totalCount={totalCount} handleSubmit={handleSubmit} />)
 
   describe("when repos is null", () => {
     test("renders null", () => {
@@ -17,6 +20,7 @@ describe("Repositories", () => {
   describe("when repos is empty array", () => {
     beforeEach(() => {
       repos = []
+      totalCount = 0
     })
 
     test("renders only RepositoriesHeader", () => {
@@ -34,6 +38,7 @@ describe("Repositories", () => {
 
   describe("when repos has values", () => {
     beforeEach(() => {
+      totalCount = 5
       repos = [
         {
           id: "test",

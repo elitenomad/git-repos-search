@@ -6,15 +6,17 @@ import {transformErrors} from "../helpers/errorsHelper"
 import Errors from "./Error"
 
 const Home = () => {
-  const [text, setText] = useState("")
+  const [text, setText] = useState('')
   const [repos, setRepos] = useState([])
+  const [totalCount, setTotalCount] = useState(0)
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState(null)
 
   const handleResponse = (response) => {
+    setTotalCount(response.data.total_count)
     setRepos(response.data.items)
-    setError(null)
     setBusy(false)
+    setError(null)
   }
 
   const handleError = (error) => {
@@ -22,16 +24,19 @@ const Home = () => {
     setBusy(false)
   }
 
-  const handleSubmit = () => {
-    setBusy(true)
-    getRepos(text)
+  const handleSubmit = (page) => {
+    if(text){
+      setBusy(true)
+      getRepos(text, page)
       .then(handleResponse)
       .catch(handleError)
+    }
   }
 
   return (
     <>
       {error && <Errors error={error} />}
+
       <SearchBar
         busy={busy}
         searchText={text}
@@ -41,7 +46,11 @@ const Home = () => {
 
       <hr />
 
-      <Repositories repos={repos} />
+      <Repositories 
+        repos={repos} 
+        totalCount={totalCount}
+        handleSubmit={handleSubmit}
+      />
     </>
   )
 }

@@ -135,6 +135,7 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 - Initially thought of adding a routing functionality. Decided not to add the routing complexity as the requirement is to create an index page which lists the repositories.
 - Added snapshot tests for the presentation components. My Preference is to add storybook snapshots for presentation components but didn't use the library in this project.
 - Error component handles generic errors triggered through API (Server, client and rest). Didn't handle different kind of errors which api might throw based on error code.
+- Added a simple pagination feature which have next and previous buttons. react-paginate library is a better choice to improve the pagination UI.
 - Added react-axe to verify if there are any accessability issues with the project. Refactored code to fix below warnings
   - [Label for a form element](https://dequeuniversity.com/rules/axe/3.5/label?application=axeAPI)
   - [Page must contain Level-one heading](https://dequeuniversity.com/rules/axe/3.5/page-has-heading-one?application=axeAPI)

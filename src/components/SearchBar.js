@@ -1,7 +1,6 @@
 import React from "react"
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
-import {Container, Row, Col} from "react-bootstrap"
 import {buttonText} from "../helpers/btnHelper"
 
 const SearchBar = (props) => {
@@ -17,35 +16,29 @@ const SearchBar = (props) => {
   }
 
   return (
-    <Container>
-      <Row>
-        <Col xs={12}>
-          <Form onSubmit={handleSubmit} className="container-fluid">
-            <Form.Group controlId="formGroupEmail">
-              <Form.Label srOnly>Repository Name</Form.Label>
-              <Form.Control
-                required
-                size="lg"
-                type="text"
-                placeholder="Enter Repository name here"
-                value={searchText}
-                onChange={handleChange}
-                autoFocus
-              />
-            </Form.Group>
+    <Form onSubmit={handleSubmit} className="container-fluid">
+      <Form.Group controlId="formGroupEmail">
+        <Form.Label srOnly>Repository Name</Form.Label>
+        <Form.Control
+          required
+          size="lg"
+          type="text"
+          placeholder="Enter Repository name here"
+          value={searchText}
+          onChange={handleChange}
+          autoFocus
+        />
+      </Form.Group>
 
-            <Button
-              disabled={!searchText}
-              variant="outline-primary"
-              size="lg"
-              type="submit"
-            >
-              {buttonText(busy)}
-            </Button>
-          </Form>
-        </Col>
-      </Row>
-    </Container>
+      <Button
+        disabled={!searchText}
+        variant="outline-primary"
+        size="lg"
+        type="submit"
+      >
+        {buttonText(busy)}
+      </Button>
+    </Form>
   )
 }
 
