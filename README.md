@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[Git Repository search Demo site](https://condescending-kepler-614e5d.netlify.app/)
+[Git Repository search Demo site](https://frontend-assignment-gitplore.netlify.app/)
 
 ## Built with
 
