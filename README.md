@@ -50,6 +50,8 @@ Note: Instead of using configuration .prettierrc file, added config to package.j
 
 ### Code Heirarchy
 
+For simplicity purposes used the following structure
+
 ```
 src
     | -> components
@@ -58,11 +60,56 @@ src
         | -> Repositories.js
         | -> Repository.js
         | -> RepositoryHeader.js
+        | -> Error.js
 | -> services
-    | -> api.js
     | -> repositories.js
 | -> helpers
     | -> btnHelper.js
+| -> App.js
+
+```
+
+Another code structure that i would like to see is based on what API offers
+
+For e.g. Search API offers below functions.
+
+```
+Search repositories
+Search commits
+Search code
+Search issues and pull requests
+Search users
+Search topics
+Search labels
+
+```
+
+So heirarchy structure could have been like below.
+
+```
+src
+    | -> components
+        |-> Search
+            |-> Repository
+                | -> Home.js
+                | -> SearchBar.js
+                | -> Repositories.js
+                | -> Repository.js
+                | -> RepositoryHeader.js
+                | -> Error.js
+            |-> Commit
+                |-> Files related to this funciton
+            |-> Code
+                |-> Files related to this function
+            |-> Issues
+                |-> Files related to this function
+            |-> etc...
+| -> services
+    | -> repositories.js
+    | -> code.js
+    | -> commits.js
+    | -> etc...
+| -> helpers
 | -> App.js
 
 ```

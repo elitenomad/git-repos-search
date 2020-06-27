@@ -22,7 +22,7 @@ describe("Error", () => {
   describe('when error is not null ', () => {
     const wrapper = mount(<Error {...props}/>)
 
-    test('renders Alert Modal with data', () => {
+    test('renders Alert with data', () => {
         expect(wrapper.find(Alert).exists()).toBeTruthy()
         expect(wrapper.find(Alert.Heading).text()).toEqual(props.error.message)
     })
