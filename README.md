@@ -87,8 +87,9 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 - Preferred axios due to ease of use and readability. It has comptability with most of the browser versions out there. One of the interesting features it provides is [cancelling requests using tokens](https://github.com/axios/axios#cancellation). I thought of using this feature if i fire the request to api onChange of the input. In the end i didn't as i triiger only one API request during the form submission.
 - Initially thought of adding a routing functionality. Decided not to add the routing complexity as the requirement is to create an index page which lists the repositories.
 - Added snapshot tests for the presentation components. My Preference is to add storybook snapshots for presentation components but didn't use the library in this project.
+- Error component handles generic errors triggered through API (Server, client and rest). Didn't handle different kind of errors which api might throw based on error code.
 - Added react-axe to verify if there are any accessability issues with the project. Refactored code to fix below warnings
-  - [Label for a form element](<[https://link](https://dequeuniversity.com/rules/axe/3.5/label?application=axeAPI)>)
+  - [Label for a form element](https://dequeuniversity.com/rules/axe/3.5/label?application=axeAPI)
   - [Page must contain Level-one heading](https://dequeuniversity.com/rules/axe/3.5/page-has-heading-one?application=axeAPI)
   - [Content should be inside landmark on page](https://dequeuniversity.com/rules/axe/3.5/landmark-one-main?application=axeAPI)
 
